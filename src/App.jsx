@@ -1,3 +1,12 @@
+import Home from "./pages/Home";
+
+function App() {
+  return <Home />;
+}
+
+export default App;
+
+
   // import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
   // import Home from "./pages/Home";
   // import NotFound from "./pages/NotFound";
@@ -17,11 +26,3 @@
   // }
 
   // export default App;
-
-import Home from "./pages/Home";
-
-function App() {
-  return <Home />;
-}
-
-export default App;
