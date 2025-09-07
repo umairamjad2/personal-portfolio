@@ -22,11 +22,19 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+    useEffect(() => {
+      if (isMenuOpen) {
+        document.body.style.overflow = "hidden"; // stop background scroll
+      } else {
+        document.body.style.overflow = ""; // reset
+      }
+    }, [isMenuOpen]);
+
   return (
     <nav
       className={cn(
         "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-sm" : "py-5"
       )}
     >
       <div className="container flex items-center justify-between">
@@ -45,7 +53,8 @@ const Navbar = () => {
           {navItems.map((item, key) => (
             <a
               href={item.href}
-              key={key}
+              // key={key}
+              key={item.name}
               className="text-foreground/80 hover:text-primary transition-colors duration-300 text-sm md:text-base"
               // className="text-foreground/80 hover:text-primary transition-colors duration-300 "
             >
@@ -77,7 +86,8 @@ const Navbar = () => {
             {navItems.map((item, key) => (
               <a
                 href={item.href}
-                key={key}
+                // key={key}
+                key={item.name}
                 className="text-foreground/80 hover:text-primary transition-colors duration-300 text-sm"
                 onClick={() => setIsMenuOpen(false)}
               >
