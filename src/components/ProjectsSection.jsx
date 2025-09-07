@@ -7,7 +7,7 @@ const projects = [
     description:
       "An Amazon-like clone with product browsing, cart features, and responsive design.",
     // image: "/Projects/amazon-clone.png",
-    image: `${import.meta.env.BASE_URL}Projects/amazon-clone.png`,
+    image: `${import.meta.env.BASE_URL}Projects/amazon-clone.webp`,
     tags: ["React", "CSS", "JavaScript"],
     demoUrl: "https://umairamjad2.github.io/amazonclone/",
     githubUrl: "https://github.com/umairamjad2/amazonclone",
@@ -19,7 +19,7 @@ const projects = [
     description:
       "A Netflix-inspired clone featuring dynamic movie listings, trailers, and a responsive UI.",
     // image: "/Projects/netflix-clone.png",
-    image: `${import.meta.env.BASE_URL}Projects/netflix-clone.png`,
+    image: `${import.meta.env.BASE_URL}Projects/netflix-clone.webp`,
     tags: ["React", "Firebase", "TMDB API"],
     demoUrl: "https://umairamjad2.github.io/Netflixclone/",
     githubUrl: "https://github.com/umairamjad2/Netflixclone",
@@ -31,7 +31,7 @@ const projects = [
     description:
       "A Weather app delivering real-time forecasts with an interactive and clean interface.",
     // image: "/Projects/weather-app.png",
-    image: `${import.meta.env.BASE_URL}Projects/weather-app.png`,
+    image: `${import.meta.env.BASE_URL}Projects/weather-app.webp`,
     tags: ["HTML", "CSS", "JavaScript", "API"],
     demoUrl: "https://umairamjad2.github.io/weather-app/",
     githubUrl: "https://github.com/umairamjad2/weather-app",
