@@ -17,9 +17,14 @@ const skills = [
   { name: "Vite", level: 85, category: "tools" },
   { name: "React Icons", level: 85, category: "tools" },
   { name: "Figma", level: 85, category: "tools" },
+
+  //Backend
+  { name: "C#", level: 70, category: "backend" },
+  { name: "ASP.NET Web API", level: 60, category: "backend" },
+  { name: "Entity Framework Core", level: 65, category: "backend" },
 ];
 
-const categories = ["all", "frontend", "tools"];
+const categories = ["all", "frontend", "backend", "tools"];
 
 const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -82,7 +87,6 @@ const SkillsSection = () => {
         </div>
       </div>
     </section>
-
   );
 };
 

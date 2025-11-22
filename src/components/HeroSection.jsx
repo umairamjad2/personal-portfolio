@@ -3,11 +3,9 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-
     <section
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6"
-
     >
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
@@ -22,9 +20,12 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-sm sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            I build interactive and responsive web experiences with modern
+            {/* I build interactive and responsive web experiences with modern
             frameworks. Focused on front-end development, I deliver designs that
-            combine performance with aesthetics.
+            combine performance with aesthetics. */}
+            Front-End Developer specializing in building scalable and
+            user-friendly interfaces with React and Next.js. I turn complex
+            problems into simple, beautiful solutions.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">

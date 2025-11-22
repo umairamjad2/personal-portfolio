@@ -13,24 +13,44 @@ const AboutSection = () => {
             <h3 className="text-xl sm:text-2xl font-semibold">
               Passionate Web Developer
             </h3>
-            <p className="text-sm sm:text-base text-muted-foreground">
+            {/* <p className="text-sm sm:text-base text-muted-foreground">
               I’m a passionate Front-End Web Developer with expertise in
               creating responsive and user-friendly web applications. I love
               turning ideas into visually appealing, functional designs using
               modern technologies like React, Tailwind CSS, and JavaScript.
-            </p>
-            <p className="text-sm sm:text-base text-muted-foreground">
+            </p> */}
+            {/* <p className="text-sm sm:text-base text-muted-foreground">
               I optimize web applications for speed, scalability, and
               performance using best practices and modern tools. Always eager to
               learn and grow, I aim to deliver clean, efficient, and scalable
               solutions that enhance user experience.
+            </p> */}
+            <p className="text-sm sm:text-base text-muted-foreground">
+              I’m a dedicated Front-End Web Developer who loves turning ideas
+              into clean, responsive, and user-friendly digital experiences.
+              Using modern technologies like React, Next.js, JavaScript, and
+              Tailwind CSS, I build visually appealing interfaces that
+              prioritize usability, performance, and seamless interaction.
             </p>
+            <p className="text-sm sm:text-base text-muted-foreground">
+              Alongside front-end skills, I’m expanding into .NET Web API to
+              better understand backend workflows and build scalable
+              applications. This improves how I integrate APIs, manage data
+              flow, and contribute to full-stack development when needed.
+            </p>
+            <p className="text-sm sm:text-base text-muted-foreground">
+              I focus on optimizing applications for speed, scalability, and
+              smooth performance by following best practices. Eager to learn and
+              grow, I aim to deliver clean, maintainable, and high-quality
+              solutions that elevate the user experience.
+            </p>
+
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">
                 Get In Touch
               </a>
               <a
-                href="UmairAmjadResume.pdf"
+                href="Resume.pdf"
                 // href={`${import.meta.env.BASE_URL}UmairAmjadResume.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -45,17 +65,18 @@ const AboutSection = () => {
               {
                 icon: <Code />,
                 title: "React Expertise",
-                desc: "I specialize in creating dynamic and interactive user interfaces with React and Tailwind CSS to deliver modern web experiences.",
+                // desc: "I specialize in creating dynamic and interactive user interfaces with React and Tailwind CSS to deliver modern web experiences.",
+                desc: "I specialize in building dynamic, interactive, and high-performance user interfaces using React and Next.js, paired with Tailwind CSS to deliver modern, SEO-friendly, and responsive web applications with seamless user experiences.",
               },
               {
                 icon: <Network />,
                 title: "API Integration",
-                desc: "Integrating RESTful APIs and managing JSON data efficiently to power dynamic, real-time features within React applications.",
+                desc: "Proficient in integrating RESTful APIs and efficiently managing JSON data to enable real-time, data-driven features in React and Next.js applications, ensuring smooth and scalable functionality.",
               },
               {
                 icon: <GitBranch />,
                 title: "Version Control",
-                desc: "I use Git and GitHub for efficient version control, collaborative development, and smooth project deployment.",
+                desc: "Experienced with Git and GitHub for personal version control and hosting projects, ensuring smooth deployment and easy project management.",
               },
             ].map((item, index) => (
               <div

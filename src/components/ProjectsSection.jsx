@@ -3,35 +3,63 @@ import React from "react";
 const projects = [
   {
     id: 1,
+    title: "Blog Application",
+    description:
+      "A modern blog app built with Next.js, MongoDB, and custom APIs. Focused on speed, scalability, and a clean user experience. Every post, every line of code — crafted with passion.",
+    image: `${import.meta.env.BASE_URL}Projects/Deshify-blog.png`,
+    tags: ["Next.js", "MongoDB", "API"],
+    demoUrl: "https://lnkd.in/d4xD3x6e",
+    githubUrl: "https://lnkd.in/d4xD3x6e",
+  },
+  {
+    id: 2,
+    title: "CRUD Admin Dashboard",
+    description:
+      "A professional full-stack CRUD Admin Dashboard built with React, .NET API, and Tailwind CSS. Designed for efficient data management with a sleek UI and seamless backend integration.",
+    image: `${import.meta.env.BASE_URL}Projects/Crud-dashboard.png`, // update if you have an image
+    tags: ["React", ".NET API", "Tailwind CSS"],
+    demoUrl: "https://github.com/umairamjad2/CRUD-Person", // add live demo if available
+    githubUrl: "https://github.com/umairamjad2/CRUD-Person",
+  },
+  {
+    id: 3,
+    title: "Netflix Clone",
+    description:
+      "A Netflix-style streaming app built with React.js and Firebase. Features user authentication, real movie data from TMDB API, and a responsive, smooth interface designed for seamless viewing.",
+    image: `${import.meta.env.BASE_URL}Projects/netflix-clone.png`,
+    tags: ["React", "Firebase", "TMDB API"],
+    demoUrl: "https://umairamjad2.github.io/Netflixclone/",
+    githubUrl: "https://github.com/umairamjad2/Netflixclone",
+  },
+  {
+    id: 4,
     title: "Amazon Clone",
     description:
-      "An Amazon-like clone with product browsing, cart features, and responsive design.",
-    // image: "/Projects/amazon-clone.png",
-    image: `${import.meta.env.BASE_URL}Projects/amazon-clone.webp`,
+      "Amazon-like e-commerce app built with React.js. Features product browsing, cart management, and a fully responsive, user-friendly interface designed for smooth shopping across devices.",
+    image: `${import.meta.env.BASE_URL}Projects/amazon-clone.png`,
     tags: ["React", "CSS", "JavaScript"],
     demoUrl: "https://umairamjad2.github.io/amazonclone/",
     githubUrl: "https://github.com/umairamjad2/amazonclone",
   },
 
   {
-    id: 2,
-    title: "Netflix Clone",
+    id: 5,
+    title: "E‑Commerce Website",
     description:
-      "A Netflix-inspired clone featuring dynamic movie listings, trailers, and a responsive UI.",
-    // image: "/Projects/netflix-clone.png",
-    image: `${import.meta.env.BASE_URL}Projects/netflix-clone.webp`,
-    tags: ["React", "Firebase", "TMDB API"],
-    demoUrl: "https://umairamjad2.github.io/Netflixclone/",
-    githubUrl: "https://github.com/umairamjad2/Netflixclone",
+      "A modern e-commerce website built with the V0 no-code platform, featuring a clean, user-friendly UI. Includes product browsing, cart functionality, and responsive design for all devices.",
+
+    image: `${import.meta.env.BASE_URL}Projects/ecommerce-website.png`, // replace with your actual image path
+    tags: ["React", "JavaScript", "CSS"],
+    demoUrl: "https://v0-e-commerce-website-gules-five.vercel.app/", // your live site
+    githubUrl: "https://github.com/umairamjad2/v0-e-commerce-website", // your GitHub link
   },
 
   {
-    id: 3,
+    id: 6,
     title: "Weather App",
     description:
-      "A Weather app delivering real-time forecasts with an interactive and clean interface.",
-    // image: "/Projects/weather-app.png",
-    image: `${import.meta.env.BASE_URL}Projects/weather-app.webp`,
+      "Real-time weather app built with HTML, CSS, and JavaScript. Delivers accurate forecasts via APIs with an interactive, clean, and responsive interface for all devices.",
+    image: `${import.meta.env.BASE_URL}Projects/weather-app.png`,
     tags: ["HTML", "CSS", "JavaScript", "API"],
     demoUrl: "https://umairamjad2.github.io/weather-app/",
     githubUrl: "https://github.com/umairamjad2/weather-app",

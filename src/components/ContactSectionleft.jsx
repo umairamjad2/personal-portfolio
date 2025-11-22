@@ -59,12 +59,12 @@ const ContactSectionleft = () => {
           <a href="https://github.com/umairamjad2" target="_blank">
             <Github className="hover:text-primary transition-colors" />
           </a>
-          <a
+          {/* <a
             href="https://www.instagram.com/__umairamjad?igsh=dHAxc2FmaGp2a3N2"
             target="_blank"
           >
             <Instagram className="hover:text-primary transition-colors" />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
