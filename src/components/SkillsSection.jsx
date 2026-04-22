@@ -1,90 +1,129 @@
-import React, { useState } from "react";
-import { cn } from "../lib/utils";
-const skills = [
-  //Frontend
-  { name: "HTML", level: 95, category: "frontend" },
-  { name: "CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
-  { name: "Tailwind CSS", level: 70, category: "frontend" },
-  { name: "React", level: 90, category: "frontend" },
-  { name: "Redux / Redux Toolkit", level: 75, category: "frontend" },
+import React from "react";
+import {
+  SiHtml5,
+  SiJavascript,
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiRedux,
+  SiBootstrap,
+  SiSocketdotio,
+  SiPython,
+  SiFirebase,
+  SiFlutter,
+  SiDart,
+  SiPostman,
+  SiVite,
+  SiGithub,
+  SiFigma,
+  SiDotnet,
+  SiCplusplus,
+  SiCss,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+} from "react-icons/si";
 
-  //Tools
-  { name: "VS Code", level: 90, category: "tools" },
-  { name: "Git/GitHub", level: 80, category: "tools" },
-  { name: "Bootstrap", level: 90, category: "tools" },
-  { name: "Firebase", level: 70, category: "tools" },
-  { name: "Vite", level: 85, category: "tools" },
-  { name: "React Icons", level: 85, category: "tools" },
-  { name: "Figma", level: 85, category: "tools" },
+import { Code, Database, Server, Cpu, Coffee, Smartphone, Layout, Terminal } from "lucide-react";
 
-  //Backend
-  { name: "C#", level: 70, category: "backend" },
-  { name: "ASP.NET Web API", level: 60, category: "backend" },
-  { name: "Entity Framework Core", level: 65, category: "backend" },
+const skillGroups = [
+  {
+    title: "Frontend Development",
+    skills: [
+      { name: "HTML5", icon: <SiHtml5 className="w-5 h-5 text-orange-500" /> },
+      { name: "CSS3", icon: <SiCss className="w-5 h-5 text-blue-500" /> },
+      { name: "JavaScript", icon: <SiJavascript className="w-5 h-5 text-yellow-400" /> },
+      { name: "React", icon: <SiReact className="w-5 h-5 text-sky-400" /> },
+      { name: "Next.js", icon: <SiNextdotjs className="w-5 h-5 text-foreground" /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss className="w-5 h-5 text-teal-400" /> },
+      { name: "Redux Toolkit", icon: <SiRedux className="w-5 h-5 text-purple-500" /> },
+      { name: "Bootstrap", icon: <SiBootstrap className="w-5 h-5 text-violet-600" /> },
+    ],
+  },
+  {
+    title: "Backend Development",
+    skills: [
+      { name: "Node.js", icon: <SiNodedotjs className="w-5 h-5 text-green-600" /> },
+      { name: "Express.js", icon: <SiExpress className="w-5 h-5 text-foreground" /> },
+      { name: "MongoDB", icon: <SiMongodb className="w-5 h-5 text-green-500" /> },
+      { name: "Socket.IO", icon: <SiSocketdotio className="w-5 h-5 text-foreground" /> },
+      { name: "WebSocket", icon: <Code className="w-5 h-5 text-green-500" /> },
+      { name: "C# / .NET", icon: <SiDotnet className="w-5 h-5 text-indigo-500" /> },
+      { name: "ASP.NET Web API", icon: <SiDotnet className="w-5 h-5 text-blue-600" /> },
+      { name: "Java", icon: <Coffee className="w-5 h-5 text-orange-600" /> },
+      { name: "Python", icon: <SiPython className="w-5 h-5 text-yellow-500" /> },
+      { name: "Entity Framework", icon: <Database className="w-5 h-5 text-red-500" /> },
+      { name: "Firebase", icon: <SiFirebase className="w-5 h-5 text-amber-500" /> },
+    ],
+  },
+  {
+    title: "Mobile Development",
+    skills: [
+      { name: "Flutter", icon: <SiFlutter className="w-5 h-5 text-sky-500" /> },
+      { name: "Dart", icon: <SiDart className="w-5 h-5 text-blue-400" /> },
+    ],
+  },
+  {
+    title: "Tools & Technologies",
+    skills: [
+      { name: "Postman", icon: <SiPostman className="w-5 h-5 text-orange-500" /> },
+      { name: "Vite", icon: <SiVite className="w-5 h-5 text-purple-400" /> },
+      { name: "Git / GitHub", icon: <SiGithub className="w-5 h-5 text-foreground" /> },
+      { name: "Figma", icon: <SiFigma className="w-5 h-5 text-pink-500" /> },
+      { name: "VS Code", icon: <Layout className="w-5 h-5 text-blue-500" /> },
+    ],
+  },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
-
 const SkillsSection = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
-
-  const filterSkills = skills.filter(
-    (skill) => activeCategory === "all" || skill.category === activeCategory
-  );
-
   return (
     <section
       id="skills"
       className="py-16 sm:py-24 px-4 relative bg-secondary/30"
     >
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center">
-          My <span className="text-primary">Skills</span>
+      <div className="container mx-auto max-w-6xl">
+
+        {/* Title */}
+        <h2 className="text-3xl sm:text-4xl font-bold mb-16 text-center">
+          My <span className="text-primary italic">Skills</span>
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12">
-          {categories.map((category, key) => (
-            <button
-              onClick={() => setActiveCategory(category)}
-              key={key}
-              className={cn(
-                "px-3 sm:px-5 py-1 sm:py-2 rounded-full text-xs sm:text-sm transition-colors duration-300 capitalize",
-                activeCategory === category
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-foreground hover:bg-secondary"
-              )}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+        {/* Groups */}
+        <div className="space-y-14">
+          {skillGroups.map((group, i) => (
+            <div key={i} className="space-y-6">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {filterSkills.map((skill, key) => (
-            <div
-              key={key}
-              className="bg-card p-4 sm:p-6 rounded-lg shadow-xs card-hover"
-            >
-              <div className="mb-2 sm:mb-4 text-left">
-                <h3 className="font-semibold text-sm sm:text-base md:text-lg">
-                  {skill.name}
+              {/* Group Title + Divider */}
+              <div className="flex items-center gap-4">
+                <h3 className="text-xl sm:text-2xl font-bold whitespace-nowrap">
+                  {group.title}
                 </h3>
+                <div className="h-[2px] w-full bg-primary/20 rounded-full" />
               </div>
-              <div className="w-full bg-secondary/50 h-2 sm:h-2.5 rounded-full overflow-hidden">
-                <div
-                  className="bg-primary h-2 sm:h-2.5 rounded-full origin-left animate-[glow_1.5s_ease-out]"
-                  style={{ width: `${skill.level}%` }}
-                />
-              </div>
-              <div className="text-right mt-1">
-                <span className="text-[10px] sm:text-sm text-muted-foreground">
-                  {skill.level}%
-                </span>
+
+              {/* Skills Grid */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                {group.skills.map((skill, j) => (
+                  <div
+                    key={j}
+                    className="flex items-center gap-2 p-3 rounded-xl
+                    bg-card border border-border shadow-sm
+                    hover:border-primary/40 hover:bg-card hover:shadow-md
+                    transition-all duration-300 group hover:-translate-y-1 min-w-0"
+                  >
+                    <div className="p-2 rounded-lg bg-secondary group-hover:bg-primary/10 transition-colors duration-300 shrink-0">
+                      {skill.icon}
+                    </div>
+                    <span className="text-sm font-semibold leading-tight break-words min-w-0">
+                      {skill.name}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

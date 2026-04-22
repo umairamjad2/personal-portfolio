@@ -1,105 +1,98 @@
-import { Code, GitBranch, Network } from "lucide-react";
+import { Code, GitBranch, Network, Smartphone } from "lucide-react";
+
+const cards = [
+  {
+    icon: <Code className="h-5 w-5 text-primary" />,
+    title: "Frontend Development",
+    desc: "React, Next.js, Tailwind CSS, Redux — building fast, responsive, and beautiful UIs.",
+  },
+  {
+    icon: <Network className="h-5 w-5 text-primary" />,
+    title: "Backend & APIs",
+    desc: "Node.js, .NET Web API, MongoDB, Firebase — scalable and reliable server-side solutions.",
+  },
+  {
+    icon: <Smartphone className="h-5 w-5 text-primary" />,
+    title: "Mobile Development",
+    desc: "Flutter & Dart — cross-platform mobile apps with native-like performance.",
+  },
+  {
+    icon: <GitBranch className="h-5 w-5 text-primary" />,
+    title: "Dev Tools",
+    desc: "Git, GitHub, Postman, Figma, VS Code — end-to-end development workflow.",
+  },
+];
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-16 sm:py-24 px-4 relative">
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center">
-          About
-          <span className="text-primary pl-3">Me</span>
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
-          <div className="space-y-4 sm:space-y-6">
-            <h3 className="text-xl sm:text-2xl font-semibold">
-              Passionate Web Developer
-            </h3>
-            {/* <p className="text-sm sm:text-base text-muted-foreground">
-              I’m a passionate Front-End Web Developer with expertise in
-              creating responsive and user-friendly web applications. I love
-              turning ideas into visually appealing, functional designs using
-              modern technologies like React, Tailwind CSS, and JavaScript.
-            </p> */}
-            {/* <p className="text-sm sm:text-base text-muted-foreground">
-              I optimize web applications for speed, scalability, and
-              performance using best practices and modern tools. Always eager to
-              learn and grow, I aim to deliver clean, efficient, and scalable
-              solutions that enhance user experience.
-            </p> */}
-            <p className="text-sm sm:text-base text-muted-foreground">
-              I’m a dedicated Front-End Web Developer who loves turning ideas
-              into clean, responsive, and user-friendly digital experiences.
-              Using modern technologies like React, Next.js, JavaScript, and
-              Tailwind CSS, I build visually appealing interfaces that
-              prioritize usability, performance, and seamless interaction.
-            </p>
-            <p className="text-sm sm:text-base text-muted-foreground">
-              Alongside front-end skills, I’m expanding into .NET Web API to
-              better understand backend workflows and build scalable
-              applications. This improves how I integrate APIs, manage data
-              flow, and contribute to full-stack development when needed.
-            </p>
-            <p className="text-sm sm:text-base text-muted-foreground">
-              I focus on optimizing applications for speed, scalability, and
-              smooth performance by following best practices. Eager to learn and
-              grow, I aim to deliver clean, maintainable, and high-quality
-              solutions that elevate the user experience.
-            </p>
+    <section id="about" className="py-16 sm:py-24 px-4 relative overflow-hidden">
 
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 pt-4 justify-center">
-              <a href="#contact" className="cosmic-button">
-                Get In Touch
-              </a>
-              <a
-                href="Resume.pdf"
-                // href={`${import.meta.env.BASE_URL}UmairAmjadResume.pdf`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 sm:px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
-              >
-                View Resume
-              </a>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 gap-4 sm:gap-6">
-            {[
-              {
-                icon: <Code />,
-                title: "React Expertise",
-                // desc: "I specialize in creating dynamic and interactive user interfaces with React and Tailwind CSS to deliver modern web experiences.",
-                desc: "I specialize in building dynamic, interactive, and high-performance user interfaces using React and Next.js, paired with Tailwind CSS to deliver modern, SEO-friendly, and responsive web applications with seamless user experiences.",
-              },
-              {
-                icon: <Network />,
-                title: "API Integration",
-                desc: "Proficient in integrating RESTful APIs and efficiently managing JSON data to enable real-time, data-driven features in React and Next.js applications, ensuring smooth and scalable functionality.",
-              },
-              {
-                icon: <GitBranch />,
-                title: "Version Control",
-                desc: "Experienced with Git and GitHub for personal version control and hosting projects, ensuring smooth deployment and easy project management.",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="gradient-border p-4 sm:p-6 card-hover"
-              >
-                <div className="flex items-start gap-3 sm:gap-4">
-                  <div className="p-2 sm:p-3 rounded-full bg-primary/10">
-                    {item.icon}
-                  </div>
-                  <div className="text-left">
-                    <h4 className="font-semibold text-sm sm:text-lg">
-                      {item.title}
-                    </h4>
-                    <p className="text-xs sm:text-sm text-muted-foreground">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* Glow background */}
+      <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="container mx-auto max-w-6xl relative z-10">
+
+        {/* Section Title */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold">
+            About <span className="text-primary italic">Me</span>
+          </h2>
+          <div className="mt-3 w-16 h-1 bg-primary/50 rounded-full mx-auto" />
         </div>
+
+        {/* Main Row */}
+        <div className="max-w-3xl mx-auto mb-20 text-center">
+          <div className="space-y-1">
+            <p className="text-primary text-sm font-semibold uppercase tracking-widest">Who I Am</p>
+            <h3 className="text-2xl sm:text-3xl font-bold text-foreground leading-tight">
+              Full-Stack &amp; Mobile Developer
+            </h3>
+          </div>
+
+          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+            I'm a passionate Full-Stack Developer focused on building clean, scalable, and
+            user-friendly web applications using React, Next.js, and modern JavaScript technologies.
+            I enjoy transforming complex problems into simple, efficient, and high-performance digital solutions.
+          </p>
+
+          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+            Alongside frontend development, I build robust backend systems using Node.js and .NET Web APIs,
+            and work with MongoDB for database management. I also explore Flutter for developing
+            cross-platform mobile applications, enabling consistent experiences across web and mobile platforms.
+          </p>
+
+          {/* Buttons */}
+          {/* <div className="flex flex-wrap gap-3 pt-4 justify-center">
+            <a href="#contact" className="cosmic-button">
+              Get In Touch
+            </a>
+            <a
+              href="Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 text-sm font-medium"
+            >
+              View Resume
+            </a>
+          </div> */}
+        </div>
+
+        {/* Expertise Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {cards.map((card, i) => (
+            <div
+              key={i}
+              className="group p-6 rounded-2xl bg-card border border-border shadow-sm hover:border-primary/40 hover:bg-card transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 w-fit mb-4 transition-colors duration-300">
+                {card.icon}
+              </div>
+              <h4 className="font-bold text-sm sm:text-base mb-2">{card.title}</h4>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{card.desc}</p>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );

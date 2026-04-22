@@ -60,15 +60,15 @@
 
 @layer base{
       :root{
-            --background: 210 40% 98%;
+            --background: 210 20% 98%;
             --foreground: 222 47% 11%;
-
+            --secondary: 210 20% 95%;
             --card: 0 0% 100%;
 
-            --primary:250 47% 60%;
-            --primary-foreground:210 40% 98%;
+            --primary: 250 65% 55%;
+            --primary-foreground: 210 40% 98%;
             
-            --border:214 32% 91%;
+            --border: 214 20% 89%;
       }
       .dark{
             --background: 222 47% 4%;
@@ -155,7 +155,15 @@
 }
 
 @utility cosmic-button {
-      @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)] hover:scale-105 active:scale-95;
+      @apply px-8 py-3 rounded-full bg-gradient-to-r from-primary to-[#7C3AED] text-primary-foreground font-semibold shadow-[0_0_15px_rgba(139,92,246,0.3)] transition-all duration-300 hover:shadow-[0_0_25px_rgba(139,92,246,0.5),0_0_50px_rgba(139,92,246,0.2)] hover:scale-105 hover:brightness-110 active:scale-95 flex items-center gap-2 w-fit;
+}
+
+.cosmic-button svg {
+      @apply transition-transform duration-300;
+}
+
+.cosmic-button:hover svg {
+      @apply translate-x-1.5;
 }
 
 @utility star{
@@ -165,6 +173,10 @@
 @utility meteor{
       @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
       box-shadow: 0 0 10px 5px rgba(255,255,255,0.3);
+}
+
+#hero, #about, #skills, #experience, #projects, #contact {
+      scroll-margin-top: 5rem;
 }
 
 #root{

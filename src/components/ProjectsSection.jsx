@@ -1,4 +1,6 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { HiOutlineExternalLink } from "react-icons/hi";
+import { SiGithub } from "react-icons/si";
 import React from "react";
 const projects = [
   {
@@ -70,8 +72,8 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-16 sm:py-20 px-4 relative">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center">
-          Featured <span className="text-primary">Projects</span>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-8 sm:mb-12 text-center">
+          Featured <span className="text-primary italic">Projects</span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto text-xs sm:text-sm md:text-base">
@@ -79,48 +81,72 @@ const ProjectsSection = () => {
           crafted with attention to detail, performance, and user experience.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
           {projects.map((project, key) => (
             <div
               key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              className="group relative flex flex-col h-full bg-card rounded-3xl overflow-hidden border border-border transition-all duration-500 hover:border-primary/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] dark:hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
             >
-              <div className="h-40 sm:h-44 lg:h-48 overflow-hidden">
+              {/* Image Container */}
+              <div className="relative h-48 sm:h-52 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent z-10 opacity-60 group-hover:opacity-30 transition-opacity duration-500" />
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
-              <div className="p-4 sm:p-5 lg:p-6">
-                <div className="flex flex-wrap gap-1 sm:gap-2 mb-3 sm:mb-4">
-                  {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-[10px] sm:text-xs border font-medium rounded-full bg-primary/20 text-secondary-foreground">
+
+              {/* Content Container */}
+              <div className="flex flex-col flex-1 p-6 sm:p-7">
+                {/* Tech Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag, i) => (
+                    <span
+                      key={i}
+                      className="px-2.5 py-1 text-[10px] sm:text-xs font-bold rounded-lg bg-secondary text-secondary-foreground border border-border/50 tracking-wide uppercase shadow-sm"
+                    >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-1">
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground text-[10px] sm:text-sm md:text-sm mb-3 sm:mb-4">
-                  {project.description}
-                </p>
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-2 sm:space-x-3">
+
+                {/* Info */}
+                <div className="flex-1 space-y-2">
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                    {project.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3 group-hover:text-muted-foreground/90 transition-colors">
+                    {project.description}
+                  </p>
+                </div>
+
+                {/* Footer / Actions */}
+                <div className="mt-6 flex justify-between items-center border-t border-border pt-5">
+                  {/* SVG Gradient Definition */}
+                  <svg width="0" height="0" className="absolute">
+                    <linearGradient id="project-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#3B82F6" />
+                      <stop offset="100%" stopColor="#8B5CF6" />
+                    </linearGradient>
+                  </svg>
+
+                  <div className="flex space-x-3 sm:space-x-4">
                     <a
                       href={project.demoUrl}
                       target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      className="p-2.5 rounded-xl bg-secondary hover:bg-primary/10 border border-border hover:border-primary/50 transition-all duration-300 group/link"
+                      title="Live Demo"
                     >
-                      <ExternalLink size={20} />
+                      <HiOutlineExternalLink size={20} stroke="url(#project-icon-gradient)" className="group-hover/link:scale-110 transition-transform" />
                     </a>
                     <a
                       href={project.githubUrl}
                       target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      className="p-2.5 rounded-xl bg-secondary hover:bg-primary/10 border border-border hover:border-primary/50 transition-all duration-300 group/link"
+                      title="Source Code"
                     >
-                      <Github size={20} />
+                      <SiGithub size={18} fill="url(#project-icon-gradient)" className="group-hover/link:scale-110 transition-transform" />
                     </a>
                   </div>
                 </div>
@@ -132,10 +158,10 @@ const ProjectsSection = () => {
         <div className="text-center mt-8 sm:mt-10 md:mt-12">
           <a
             target="_blank"
-            className="cosmic-button w-fit flex items-center mx-auto gap-2 text-xs sm:text-sm md:text-base"
+            className="cosmic-button mx-auto text-xs sm:text-sm md:text-base"
             href="https://github.com/umairamjad2"
           >
-            Check My Github <ArrowRight size={16} />
+            Check My Github <ArrowRight size={18} />
           </a>
         </div>
       </div>
@@ -144,78 +170,3 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
-
-// const ProjectsSection = () => {
-//   return (
-//     <section id="projects" className="py-16 sm:py-20 px-4 relative">
-//       <div className="container mx-auto max-w-5xl">
-//         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-//           Featured <span className="text-primary">Projects</span>
-//         </h2>
-//         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-//           Here are some of my recent projects. Each project was carefully
-//           crafted with attention to detail, performance, and user experience.
-//         </p>
-
-//         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-//           {projects.map((project, key) => (
-//             <div
-//               key={key}
-//               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
-//             >
-//               <div className="h-48 overflow-hidden">
-//                 <img
-//                   src={project.image}
-//                   alt={project.title}
-//                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-//                 />
-//               </div>
-//               <div className="p-6">
-//                 <div className="flex flex-wrap gap-2 mb-4">
-//                   {project.tags.map((tag) => (
-//                     <span className="px-2 py-1 text-xs border font-medium rounded-full bg-primary/20  text-secondary-foreground">
-//                       {tag}
-//                     </span>
-//                   ))}
-//                 </div>
-//                 <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-//                 <p className="text-muted-foreground text-sm mb-4">
-//                   {project.description}
-//                 </p>
-//                 <div className="flex justify-between items-center">
-//                   <div className="flex space-x-3">
-//                     <a
-//                       href={project.demoUrl}
-//                       target="_blank"
-//                       className="text-foreground/80 hover:text-primary transition-colors duration-300 "
-//                     >
-//                       <ExternalLink size={20} />
-//                     </a>
-//                     <a
-//                       href={project.githubUrl}
-//                       target="_blank"
-//                       className="text-foreground/80 hover:text-primary transition-colors duration-300 "
-//                     >
-//                       <Github size={20} />
-//                     </a>
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//         <div className="text-center mt-12">
-//           <a
-//             target="_blank"
-//             className="cosmic-button w-fit flex items-center mx-auto gap-2"
-//             href="https://github.com/umairamjad2"
-//           >
-//             Check My Github <ArrowRight size={16} />
-//           </a>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default ProjectsSection;

@@ -1,21 +1,18 @@
 import React from "react";
-import ThemeToggle from "../components/ThemeToggle";
-import StarBackground from "../components/StarBackground";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
 import SkillsSection from "../components/SkillsSection";
+import ExperienceSection from "../components/ExperienceSection";
 import ProjectsSection from "../components/ProjectsSection";
-import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 
 const Home = () => {
   return (
     <div className="min-h-screen">
-      {/*Theme Toggle*/}
-      <ThemeToggle />
+
       {/*Background Effects*/}
-      <StarBackground />
+      <div className="fixed inset-0 -z-10 bg-background" />
       {/*Navbar*/}
       <Navbar />
       {/*Main Content*/}
@@ -24,7 +21,7 @@ const Home = () => {
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />
-        <ContactSection />
+        <ExperienceSection />
       </main>
       {/*Footer*/}
       <Footer />
