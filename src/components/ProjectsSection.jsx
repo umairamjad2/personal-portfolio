@@ -4,6 +4,17 @@ import { SiGithub } from "react-icons/si";
 import React from "react";
 const projects = [
   {
+    id: 2,
+    title: "Real-Time Chat Application",
+    description:
+      "A full-stack real-time chat application built with the MERN stack and Socket.IO. Features secure JWT authentication, instant messaging, online/offline user status, and profile management. Deployed using Railway (backend) and Vercel (frontend).",
+
+    image: `${import.meta.env.BASE_URL}Projects/chat-app.png`, // make sure this image exists
+    tags: ["React", "Node.js", "Express", "MongoDB", "Socket.IO"],
+    demoUrl: "https://chat-app-frontend-gules.vercel.app/", // your frontend live link
+    githubUrl: "https://github.com/umairamjad2/ChatApp-Frontend", // your repo
+  },
+  {
     id: 1,
     title: "Blog Application",
     description:
@@ -13,16 +24,8 @@ const projects = [
     demoUrl: "https://lnkd.in/d4xD3x6e",
     githubUrl: "https://lnkd.in/d4xD3x6e",
   },
-  {
-    id: 2,
-    title: "CRUD Admin Dashboard",
-    description:
-      "A professional full-stack CRUD Admin Dashboard built with React, .NET API, and Tailwind CSS. Designed for efficient data management with a sleek UI and seamless backend integration.",
-    image: `${import.meta.env.BASE_URL}Projects/Crud-dashboard.png`, // update if you have an image
-    tags: ["React", ".NET API", "Tailwind CSS"],
-    demoUrl: "https://github.com/umairamjad2/CRUD-Person", // add live demo if available
-    githubUrl: "https://github.com/umairamjad2/CRUD-Person",
-  },
+
+
   {
     id: 3,
     title: "Netflix Clone",
@@ -43,19 +46,16 @@ const projects = [
     demoUrl: "https://umairamjad2.github.io/amazonclone/",
     githubUrl: "https://github.com/umairamjad2/amazonclone",
   },
-
   {
     id: 5,
-    title: "E‑Commerce Website",
+    title: "CRUD Admin Dashboard",
     description:
-      "A modern e-commerce website built with the V0 no-code platform, featuring a clean, user-friendly UI. Includes product browsing, cart functionality, and responsive design for all devices.",
-
-    image: `${import.meta.env.BASE_URL}Projects/ecommerce-website.png`, // replace with your actual image path
-    tags: ["React", "JavaScript", "CSS"],
-    demoUrl: "https://v0-e-commerce-website-gules-five.vercel.app/", // your live site
-    githubUrl: "https://github.com/umairamjad2/v0-e-commerce-website", // your GitHub link
+      "A professional full-stack CRUD Admin Dashboard built with React, .NET API, and Tailwind CSS. Designed for efficient data management with a sleek UI and seamless backend integration.",
+    image: `${import.meta.env.BASE_URL}Projects/Crud-dashboard.png`, // update if you have an image
+    tags: ["React", ".NET API", "Tailwind CSS"],
+    demoUrl: "https://github.com/umairamjad2/CRUD-Person", // add live demo if available
+    githubUrl: "https://github.com/umairamjad2/CRUD-Person",
   },
-
   {
     id: 6,
     title: "Weather App",
