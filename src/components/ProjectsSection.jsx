@@ -19,7 +19,7 @@ const projects = [
     title: "Blog Application",
     description:
       "A modern blog app built with Next.js, MongoDB, and custom APIs. Focused on speed, scalability, and a clean user experience. Every post, every line of code — crafted with passion.",
-    image: `${import.meta.env.BASE_URL}Projects/Deshify-blog.png`,
+    image: `${import.meta.env.BASE_URL}Projects/DeshifyImg.png`,
     tags: ["Next.js", "MongoDB", "API"],
     demoUrl: "https://deshify-blog-app.vercel.app/",
     githubUrl: "https://github.com/umairamjad2/deshify-blog-app",
