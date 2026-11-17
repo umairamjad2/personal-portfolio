@@ -37,7 +37,7 @@ const HeroSection = () => {
             </div>
 
             <p className="text-sm sm:text-base text-muted-foreground/80 max-w-xl leading-snug">
-              Full-Stack Developer focused on building responsive, high-performance web and mobile applications using React, Next.js, Node.js, and Flutter.
+              Full-Stack Developer at NxtHatch Technologies, building responsive, high-performance web applications with React, Next.js, TypeScript, and NestJS, plus cross-platform mobile apps with Flutter.
             </p>
 
             {/* Languages */}

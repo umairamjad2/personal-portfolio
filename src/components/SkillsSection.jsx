@@ -22,6 +22,15 @@ import {
   SiNodedotjs,
   SiExpress,
   SiMongodb,
+  SiNestjs,
+  SiTypescript,
+  SiPrisma,
+  SiPostgresql,
+  SiSanity,
+  SiWordpress,
+  SiVercel,
+  SiSwagger,
+  SiJsonwebtokens,
 } from "react-icons/si";
 
 import { Code, Database, Server, Cpu, Coffee, Smartphone, Layout, Terminal } from "lucide-react";
@@ -33,6 +42,7 @@ const skillGroups = [
       { name: "HTML5", icon: <SiHtml5 className="w-5 h-5 text-orange-500" /> },
       { name: "CSS3", icon: <SiCss className="w-5 h-5 text-blue-500" /> },
       { name: "JavaScript", icon: <SiJavascript className="w-5 h-5 text-yellow-400" /> },
+      { name: "TypeScript", icon: <SiTypescript className="w-5 h-5 text-blue-600" /> },
       { name: "React", icon: <SiReact className="w-5 h-5 text-sky-400" /> },
       { name: "Next.js", icon: <SiNextdotjs className="w-5 h-5 text-foreground" /> },
       { name: "Tailwind CSS", icon: <SiTailwindcss className="w-5 h-5 text-teal-400" /> },
@@ -44,8 +54,12 @@ const skillGroups = [
     title: "Backend Development",
     skills: [
       { name: "Node.js", icon: <SiNodedotjs className="w-5 h-5 text-green-600" /> },
+      { name: "NestJS", icon: <SiNestjs className="w-5 h-5 text-red-600" /> },
       { name: "Express.js", icon: <SiExpress className="w-5 h-5 text-foreground" /> },
+      { name: "PostgreSQL", icon: <SiPostgresql className="w-5 h-5 text-sky-600" /> },
+      { name: "Prisma ORM", icon: <SiPrisma className="w-5 h-5 text-foreground" /> },
       { name: "MongoDB", icon: <SiMongodb className="w-5 h-5 text-green-500" /> },
+      { name: "JWT Auth", icon: <SiJsonwebtokens className="w-5 h-5 text-pink-500" /> },
       { name: "Socket.IO", icon: <SiSocketdotio className="w-5 h-5 text-foreground" /> },
       { name: "WebSocket", icon: <Code className="w-5 h-5 text-green-500" /> },
       { name: "C# / .NET", icon: <SiDotnet className="w-5 h-5 text-indigo-500" /> },
@@ -54,6 +68,13 @@ const skillGroups = [
       { name: "Python", icon: <SiPython className="w-5 h-5 text-yellow-500" /> },
       { name: "Entity Framework", icon: <Database className="w-5 h-5 text-red-500" /> },
       { name: "Firebase", icon: <SiFirebase className="w-5 h-5 text-amber-500" /> },
+    ],
+  },
+  {
+    title: "CMS",
+    skills: [
+      { name: "Sanity CMS", icon: <SiSanity className="w-5 h-5 text-red-500" /> },
+      { name: "WordPress", icon: <SiWordpress className="w-5 h-5 text-blue-500" /> },
     ],
   },
   {
@@ -67,6 +88,8 @@ const skillGroups = [
     title: "Tools & Technologies",
     skills: [
       { name: "Postman", icon: <SiPostman className="w-5 h-5 text-orange-500" /> },
+      { name: "Swagger", icon: <SiSwagger className="w-5 h-5 text-green-500" /> },
+      { name: "Vercel", icon: <SiVercel className="w-5 h-5 text-foreground" /> },
       { name: "Vite", icon: <SiVite className="w-5 h-5 text-purple-400" /> },
       { name: "Git / GitHub", icon: <SiGithub className="w-5 h-5 text-foreground" /> },
       { name: "Figma", icon: <SiFigma className="w-5 h-5 text-pink-500" /> },

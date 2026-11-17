@@ -4,6 +4,17 @@ import { SiGithub } from "react-icons/si";
 import React from "react";
 const projects = [
   {
+    id: 7,
+    title: "TaskNest: Full-Stack Task Manager",
+    description:
+      "A full-stack task manager with a drag-and-drop Kanban board, progress dashboard and production-grade auth: email verification, password reset, multi-device sessions with rotating refresh tokens, and role-based access. Try the one-click demo, no sign-up needed.",
+    image: `${import.meta.env.BASE_URL}Projects/tasknest.png`,
+    tags: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma"],
+    demoUrl: "https://nest-frontend-apis.vercel.app/",
+    githubUrl: "https://github.com/umairamjad2/nest-frontend-apis",
+    featured: true,
+  },
+  {
     id: 2,
     title: "Real-Time Chat Application",
     description:
@@ -85,68 +96,69 @@ const ProjectsSection = () => {
           {projects.map((project, key) => (
             <div
               key={key}
-              className="group relative flex flex-col h-full bg-card rounded-3xl overflow-hidden border border-border transition-all duration-500 hover:border-primary/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] dark:hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+              className="group relative rounded-3xl p-px bg-gradient-to-br from-border via-border to-border hover:from-primary/70 hover:via-primary/20 hover:to-primary/60 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_-12px_hsl(var(--primary)/0.35)]"
             >
-              {/* Image Container */}
-              <div className="relative h-48 sm:h-52 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent z-10 opacity-60 group-hover:opacity-30 transition-opacity duration-500" />
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-              </div>
+              <div className="flex flex-col h-full rounded-[calc(1.5rem-1px)] bg-card overflow-hidden">
+                {/* Image */}
+                <div className="p-3 pb-0">
+                  <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-border/60 bg-secondary">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-transparent opacity-70 group-hover:opacity-40 transition-opacity duration-500" />
 
-              {/* Content Container */}
-              <div className="flex flex-col flex-1 p-6 sm:p-7">
-                {/* Tech Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="px-2.5 py-1 text-[10px] sm:text-xs font-bold rounded-lg bg-secondary text-secondary-foreground border border-border/50 tracking-wide uppercase shadow-sm"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                    {project.featured && (
+                      <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary text-primary-foreground text-[10px] sm:text-xs font-semibold shadow-lg">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground animate-pulse" />
+                        Latest
+                      </span>
+                    )}
+                  </div>
                 </div>
 
-                {/* Info */}
-                <div className="flex-1 space-y-2">
-                  <h3 className="text-xl sm:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                {/* Content */}
+                <div className="flex flex-col flex-1 p-5 sm:p-6 text-left">
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground leading-snug group-hover:text-primary transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3 group-hover:text-muted-foreground/90 transition-colors">
+                  <p className="mt-2 text-muted-foreground text-sm leading-relaxed line-clamp-3">
                     {project.description}
                   </p>
-                </div>
 
-                {/* Footer / Actions */}
-                <div className="mt-6 flex justify-between items-center border-t border-border pt-5">
-                  {/* SVG Gradient Definition */}
-                  <svg width="0" height="0" className="absolute">
-                    <linearGradient id="project-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#3B82F6" />
-                      <stop offset="100%" stopColor="#8B5CF6" />
-                    </linearGradient>
-                  </svg>
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-1.5 mt-4">
+                    {project.tags.map((tag, i) => (
+                      <span
+                        key={i}
+                        className="px-2 py-0.5 text-[11px] font-medium rounded-md bg-primary/10 text-primary border border-primary/20"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
-                  <div className="flex space-x-3 sm:space-x-4">
+                  {/* Actions */}
+                  <div className="mt-auto pt-5 grid grid-cols-2 gap-2.5">
                     <a
                       href={project.demoUrl}
                       target="_blank"
-                      className="p-2.5 rounded-xl bg-secondary hover:bg-primary/10 border border-border hover:border-primary/50 transition-all duration-300 group/link"
-                      title="Live Demo"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-primary text-primary-foreground text-sm font-semibold hover:brightness-110 hover:shadow-[0_0_16px_hsl(var(--primary)/0.5)] transition-all duration-300"
                     >
-                      <HiOutlineExternalLink size={20} stroke="url(#project-icon-gradient)" className="group-hover/link:scale-110 transition-transform" />
+                      <HiOutlineExternalLink size={16} />
+                      Live Demo
                     </a>
                     <a
                       href={project.githubUrl}
                       target="_blank"
-                      className="p-2.5 rounded-xl bg-secondary hover:bg-primary/10 border border-border hover:border-primary/50 transition-all duration-300 group/link"
-                      title="Source Code"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl border border-border bg-secondary/60 text-foreground text-sm font-semibold hover:border-primary/50 hover:text-primary transition-all duration-300"
                     >
-                      <SiGithub size={18} fill="url(#project-icon-gradient)" className="group-hover/link:scale-110 transition-transform" />
+                      <SiGithub size={15} />
+                      Code
                     </a>
                   </div>
                 </div>

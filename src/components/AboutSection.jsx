@@ -4,12 +4,12 @@ const cards = [
   {
     icon: <Code className="h-5 w-5 text-primary" />,
     title: "Frontend Development",
-    desc: "React, Next.js, Tailwind CSS, Redux — building fast, responsive, and beautiful UIs.",
+    desc: "React, Next.js, TypeScript, Tailwind CSS, Redux — fast, responsive UIs built from Figma designs.",
   },
   {
     icon: <Network className="h-5 w-5 text-primary" />,
     title: "Backend & APIs",
-    desc: "Node.js, .NET Web API, MongoDB, Firebase — scalable and reliable server-side solutions.",
+    desc: "NestJS, Node.js, .NET Web API, PostgreSQL, Prisma, MongoDB — secure, scalable REST APIs.",
   },
   {
     icon: <Smartphone className="h-5 w-5 text-primary" />,
@@ -50,15 +50,15 @@ const AboutSection = () => {
           </div>
 
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-            I'm a passionate Full-Stack Developer focused on building clean, scalable, and
-            user-friendly web applications using React, Next.js, and modern JavaScript technologies.
-            I enjoy transforming complex problems into simple, efficient, and high-performance digital solutions.
+            I'm a Full-Stack Developer at NxtHatch Technologies, building clean, scalable, and
+            user-friendly web applications with React, Next.js, and TypeScript. I enjoy turning
+            complex problems into simple, efficient, and high-performance digital solutions.
           </p>
 
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-            Alongside frontend development, I build robust backend systems using Node.js and .NET Web APIs,
-            and work with MongoDB for database management. I also explore Flutter for developing
-            cross-platform mobile applications, enabling consistent experiences across web and mobile platforms.
+            On the backend, I build REST APIs with NestJS, Node.js, and .NET Web API, working with
+            PostgreSQL, Prisma, and MongoDB. I also connect websites to content platforms like Sanity CMS
+            and WordPress, and I've built cross-platform mobile apps with Flutter.
           </p>
 
           {/* Buttons */}

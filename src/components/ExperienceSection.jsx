@@ -4,9 +4,24 @@ import { ChevronDown, ChevronUp, Briefcase } from "lucide-react";
 
 const experiences = [
   {
+    role: "Full-Stack Developer",
+    company: "NxtHatch Technologies",
+    period: "August 2026 – Present",
+    location: "Karachi, Pakistan – On-site (Full-time)",
+    points: [
+      "Build and maintain responsive web applications using React.js, Next.js, TypeScript, and modern frontend practices.",
+      "Develop and integrate full-stack features, working with REST APIs, backend services, databases, and third-party integrations.",
+      "Build backend services and REST APIs with NestJS and TypeScript, using a modular architecture, request validation, and authentication.",
+      "Built the frontend integration with Sanity CMS, connecting the website to Sanity to fetch and render managed content, and work with WordPress to maintain content-driven website experiences.",
+      "Integrate feedback forms and Trustpilot review functionality into websites to support customer feedback and social proof.",
+      "Implement production-ready UI from Figma designs, focusing on responsive layouts, reusable components, accessibility, and consistent styling.",
+      "Collaborate with the development team through Git/GitHub workflows, code reviews, debugging, and iterative feature delivery.",
+    ],
+  },
+  {
     role: "Frontend Developer",
     company: "SYHO",
-    period: "December 2025 – Present",
+    period: "December 2025 – July 2026",
     location: "Pakistan – Remote (Full-time)",
     points: [
       "Developed and maintained cross-platform chat applications using React (web) and Flutter (mobile), ensuring smooth and responsive user experiences.",
@@ -57,10 +72,12 @@ const ExperienceCard = ({ exp, index }) => {
               <HiCalendar size={13} fill="url(#calendar-gradient)" />
               {exp.period}
             </span>
-            <span className="inline-flex items-center mt-1.5 gap-1.5 text-muted-foreground text-xs font-medium border border-white/5 py-1 px-3 rounded-full bg-secondary/30">
-              <HiMapPin size={13} fill="url(#location-gradient)" />
-              {exp.location}
-            </span>
+            {exp.location && (
+              <span className="inline-flex items-center mt-1.5 gap-1.5 text-muted-foreground text-xs font-medium border border-white/5 py-1 px-3 rounded-full bg-secondary/30">
+                <HiMapPin size={13} fill="url(#location-gradient)" />
+                {exp.location}
+              </span>
+            )}
           </div>
         </div>
 
